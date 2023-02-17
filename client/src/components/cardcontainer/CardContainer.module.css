@@ -1,0 +1,9 @@
+.CardContainer{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+gap: 1em;
+background-image: url("../../imagenes/ciudad\ neon.jpg");
+
+
+}
