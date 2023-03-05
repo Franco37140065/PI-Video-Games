@@ -1,5 +1,17 @@
+.head{
+	height: 200px;
+	text-align: center;
+}
+
 .Home{
+	
+    text-align: center;
+	width: 100%;
+}
 
-	background-image: url("../../imagenes/wallpaperbetter.com_1920x1080\ \(2\).jpg");
-
+.head h3 {
+	color: white;
+	text-align: center;
+    font-size: 20px;
+    
 }

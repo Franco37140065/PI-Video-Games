@@ -1,40 +1,53 @@
 import Card from '../Card/Card';
 import style from '../cardcontainer/CardContainer.module.css';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { getGames } from '../../redux/actions';
+import { getGames,getGenres } from '../../redux/actions';
 
-
-const CardContainer = () =>{
-    const games = useSelector((state)=> state.games);
+const CardContainer = ({allGames}) =>{
+    
     const dispatch = useDispatch();
+  
     
     useEffect(()=>{
-        dispatch(getGames());
-    return ()=>{
-        console.log("se desmonta")
-    }},
-    []);
+        dispatch(getGames(),getGenres());
 
+    },[]);
+    
+     
     return(
-        <div className={style.CardContainer}>
+      
+        
+            <div className={style.CardContainer}>
 
-            {
-                games.map((game)=>{
+            {   
+                allGames.length ? 
+                allGames.map((game)=>{
                     return(
-                    <Card
+                        <Card
+                        key={game.id}
                         name={game.name}
                         background_image={game.background_image}
                         released={game.released}
                         rating={game.rating}
                         platforms={game.platforms}
-                        genre={game.Genres}
+                        genres={game.genres.map(g => g.name)}
+                        id={game.id}
                     />
+                    
                     )
-                })
-            }
+     
+                }):               
+                <div className={style.loading}>
+                     <a href="">
+		                <img src=""  />
+	                </a>
+               
+                </div>
+       }
 
-        </div>
+             </div>
+        
     )
 }
 export default CardContainer;

@@ -1,9 +1,15 @@
-.CardContainer{
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-gap: 1em;
-text-align: center;
+.Detail h1 {
+    color: rgb(0, 0, 0);
+}
+.Detail img{
+      
+        width: 300px;
+        height: 300px;
+        left: 100px;
+        top: 100px;
+        border-radius: 6px;
+        object-fit: cover;
+        
 }
 .loading{
     background:transparent url('../../imagenes/0510cd96-3032-4e0b-bbc2-c47858bd84e6.gif') center no-repeat;
