@@ -3,7 +3,7 @@ import style from '../cardcontainer/CardContainer.module.css';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { getGames,getGenres } from '../../redux/actions';
-
+import Loading from '../Loading/Loading'
 const CardContainer = ({allGames}) =>{
     
     const dispatch = useDispatch();
@@ -28,20 +28,17 @@ const CardContainer = ({allGames}) =>{
                         key={game.id}
                         name={game.name}
                         background_image={game.background_image}
-                        released={game.released}
                         rating={game.rating}
-                        platforms={game.platforms}
-                        genres={game.genres.map(g => g.name)}
+                        genres={game.genres}
                         id={game.id}
+                        datainDB={game.createInDb}
                     />
                     
                     )
      
                 }):               
-                <div className={style.loading}>
-                     <a href="">
-		                <img src=""  />
-	                </a>
+                <div >
+                     <Loading/>
                
                 </div>
        }

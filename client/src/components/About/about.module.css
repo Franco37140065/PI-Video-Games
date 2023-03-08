@@ -1,13 +1,26 @@
-.buttonub {
-  /* gap: 40px; */
- display:flex;
- justify-content: flex-start;
- gap: 16px;
- position: absolute;
- margin-top: 3%;
+.container_about {
+    margin-top: 200px;
+    font-family: 'Press Start 2P';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_about h1 {
+    font-size: medium;
+    color: aliceblue;
+}
+.foto{
+    width: 300px;
+    height: 300px;
+    left: 100px;
+    top: 100px;
+    border-radius: 6px;
+    object-fit: cover;
 }
 .button {
-   
+ 
     padding: 0.6em 2em;
     border: none;
     outline: none;

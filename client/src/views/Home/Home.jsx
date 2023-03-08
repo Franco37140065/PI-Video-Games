@@ -9,6 +9,7 @@ import OrderBy from '../../components/OrderBy/OrderBy';
 import { orderBy, orderByRating,getNameGame } from '../../redux/actions';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import { getGames } from '../../redux/actions';
+import { Link } from 'react-router-dom';
 
 
 const Home =(props)=> {
@@ -45,7 +46,7 @@ const  handleSortRating = (e) => {
 const handleInputChange = (e) =>{
 e.preventDefault();
 setName(e.target.value)
-console.log(name)
+
 }
 
 const handleSubmit = (e) =>{
@@ -79,7 +80,13 @@ const handleClick =(e)=>{
              <CardContainer allGames={currentGames}/>
       
             </div>
+            <div className={style.about}> 
+            <Link to='/about' >About the page</Link>
+            </div>
+               
         </div>
+
+       
     )
 }
 

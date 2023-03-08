@@ -10,6 +10,7 @@
 	transition: all 100ms ease-out;
 	cursor: default;
 	text-align: center;
+	padding: 10px;
 }
 .image {    
     width: 300px;
@@ -28,5 +29,19 @@
 .card h4{
 color: white;
 font-size: 20px;}
-.card p {color: white;}
+.genres {color: white;}
 
+.btnDetail{
+    width: 100px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #25A2FF;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.btnDetail:hover{
+    cursor: pointer;
+}
+.rating{
+    color: #fcff37;
+}

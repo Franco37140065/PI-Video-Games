@@ -1,13 +1,13 @@
-.buttonub {
-  /* gap: 40px; */
- display:flex;
- justify-content: flex-start;
- gap: 16px;
- position: absolute;
- margin-top: 3%;
+.container{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-image: url('../../imagenes/404.gif');
+ 
+    height: 949px;
 }
 .button {
-   
+ 
     padding: 0.6em 2em;
     border: none;
     outline: none;

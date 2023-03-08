@@ -1,18 +1,7 @@
 .CardContainer{
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-gap: 1em;
-text-align: center;
-}
-.loading{
-    background:transparent url('../../imagenes/0510cd96-3032-4e0b-bbc2-c47858bd84e6.gif') center no-repeat;
-    display: auto;
-    justify-content: center;
-    position: absolute;
-    top: 15%;
-    width: 99%;
-     
-    height: 120px;
-    
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
 }

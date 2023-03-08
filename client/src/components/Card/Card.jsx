@@ -6,7 +6,8 @@ import {Link} from 'react-router-dom'
 
 
 
-const Card = ({name,background_image,rating,genres,id})=>{
+const Card = ({name,background_image,rating,genres,id,datainDB})=>{
+
 
     return(
         <div className={style.card}>
@@ -15,14 +16,21 @@ const Card = ({name,background_image,rating,genres,id})=>{
             <h4>{name}</h4>
             <img className={style.image} src={background_image} alt="image not fount" />
     
-            <p>★ {rating}</p>
+            <p className={style.rating}>★ {rating}</p>
             
             <div className={style.infoContGenres}>
-            <p> {genres+' '}{/*revisar el post por que cuando creo un juego nuevo se rompe en los generos */}
-            </p>
+            { datainDB
+                ? genres.map((value,index)=>(//preguntar por q la p tiene key
+                  <p className={style.genres} key={index}>
+                    {value.name+', '}{/*como hacer que la coma no se quede al final*/}                  
+                  </p>
+                ))
+                : <p className={style.genres}>{genres+' '}</p> }
+
+            
               </div>
         <div>
-          <Link to = {`/home/${id}`}><button >Details</button></Link></div>
+          <Link to = {`/home/${id}`}><button className={style.btnDetail} >Details</button></Link></div>
         </div>
     )
   }
